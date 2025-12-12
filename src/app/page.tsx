@@ -83,7 +83,7 @@ export default function Home() {
   const currentText = step === 0 ? "X" : step === 1 ? "Y" : step === 2 ? "Z" : "";
 
   return (
-    <div className={`w-full h-screen flex items-center justify-center overflow-hidden transition-colors duration-700 ${isChatOpen ? 'bg-[#D9D9D9]' : 'bg-[#0b0b0e]'}`}>
+    <div className={`w-full h-screen flex items-center justify-center overflow-hidden ${isChatOpen ? 'bg-[#D9D9D9]' : 'bg-[#0b0b0e]'}`}>
       <LoadingStyles />
       <div className={`fixed inset-0 bg-[#0b0b0e] z-50 transition-opacity duration-300 pointer-events-none ${scale === 0 ? 'opacity-100' : 'opacity-0'}`}></div>
 

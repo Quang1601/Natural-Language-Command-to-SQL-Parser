@@ -33,7 +33,7 @@ export const ChatConversation = ({ messages, isLoading }: { messages: any[]; isL
     <div 
       ref={containerRef}
       onScroll={handleScroll}
-      className="flex-1 overflow-y-auto pb-[30px] pt-[30px] px-[30px] flex flex-col gap-[24px] scrollbar-hide"
+      className="flex-1 overflow-y-auto pb-[30px] pt-[30px] px-[30px] flex flex-col gap-6 scrollbar-hide"
       style={{
         scrollbarWidth: 'none',
         msOverflowStyle: 'none',
@@ -46,10 +46,10 @@ export const ChatConversation = ({ messages, isLoading }: { messages: any[]; isL
       `}</style>
       {messages.map((msg, idx) => (
         <div key={idx} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
-          {msg.role === "bot" && <div className="w-[48px] h-[48px] shrink-0 mr-[8px]"><IconBot /></div>}
+          {msg.role === "bot" && <div className="w-12 h-12 shrink-0 mr-2"><IconBot /></div>}
           
           {msg.type === "sql" ? (
-            <div className="max-w-[600px] p-[16px] rounded-tr-[24px] rounded-br-[24px] rounded-bl-[24px] rounded-tl-none bg-white text-black">
+            <div className="max-w-[600px] p-4 rounded-tr-3xl rounded-br-3xl rounded-bl-[24px] rounded-tl-none bg-white text-black">
               <div className="text-sm text-gray-600 mb-2">{msg.explanation}</div>
               {msg.text && (
                 <pre className="bg-gray-100 p-3 rounded text-sm overflow-x-auto font-mono text-gray-800">
